@@ -6,13 +6,30 @@
 	box-sizing: border-box;
 }
 
+a {
+	text-decoration: none;
+	color: var(--black-color);
+	font-weight: bold;
+}
+
+:root {
+	--border-color: #d4d4d4;
+	--black-color: #000;
+	--background-color: #f9f9f9;
+}
+
 html, body {
 	height: 100%;
 }
 
 .header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
 	height: 55px;
-	border: 1px solid #d2d2d2;
+	border-bottom: 1px solid var(--border-color);
+	background: #FFF;
 }
 
 .header__container {
@@ -35,6 +52,7 @@ html, body {
 
 .content {
 	background: #f9f9f9;
+	padding-top: 55px;
 }
 
 .content__container {
@@ -48,6 +66,11 @@ html, body {
 	display: flex;
 	align-items: center;
 	padding: 1em 0;
+	overflow-x: auto;
+}
+
+.profile__container {
+	margin-left: 1em;
 }
 
 .profile__image,
@@ -60,7 +83,6 @@ html, body {
 }
 
 .profile__image {
-	margin-left: 1.5em;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -75,4 +97,88 @@ html, body {
 	width: 85px;
 	height: 85px;
 	border-radius: 50%;
+}
+
+.content__posts {
+	max-width: 95%;
+	width: 760px;
+	margin: 20px auto;
+	border: 1px solid var(--border-color);
+	border-radius: 8px;
+}
+
+.post__header {
+	height: 60px;
+	background: #FFF;
+	border-top-left-radius: inherit;
+	border-top-right-radius: inherit;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5em;
+}
+
+.post__user {
+	display: flex;
+	align-items: center;
+}
+
+.post__user-img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+.post__user-name {
+	color: var(--black-color);
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: 0.7em;
+}
+
+.post__settings {
+	color: var(--black-color);
+}
+
+.post__content {
+	width: 100%;
+	height: 80%;
+}
+
+.post__feed {
+	padding: 0.5em 0.8em;
+	font-size: 1.5em;
+	display: flex;
+}
+
+.post__feed > div {
+	cursor: pointer;
+}
+
+.post__comment-icon {
+	margin-left: 1em;
+}
+
+.post__bookmark-icon {
+	margin-left: auto;
+}
+
+.post__likes {
+	display: flex;
+	align-items: center;
+	background-color: #efefef;
+	padding: 0.2em 0.6em;
+}
+
+.user__profile {
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
+.user__text {
+	font-size: 0.9em;
+	margin-left: 0.6em;
 }
