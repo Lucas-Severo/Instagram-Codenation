@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+}
+
+.header {
+	height: 55px;
+	box-shadow: 1px 0 1px black;
+}
+
+.header__container {
+	height: 100%;
+	max-width: 760px;
+	padding: 0 20px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header__logo {
+	height: 2.5em;
+}
+
+.header__button {
+	cursor: pointer;
+}
+
+
+
